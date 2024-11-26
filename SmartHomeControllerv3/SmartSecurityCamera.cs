@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace SmartHomeController
         {
             this.Resolution = cameraResolution;
             recordingStatus = false; // Default recording status
-            
+
         }
 
         // Methods
@@ -53,6 +54,16 @@ namespace SmartHomeController
             {
                 Console.WriteLine($"{DeviceName} is not currently recording.");
             }
-        }     
+        }
+        
+    public override void GetStatus()
+    {
+        base.GetStatus();
+        Console.WriteLine("this is a smart light");
+        Console.WriteLine($"Resolution: {Resolution} ");
     }
+
+}
+
+
 }

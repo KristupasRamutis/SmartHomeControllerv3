@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,12 @@ namespace SmartHomeController
             this.CurrentTemperature = thermostatCurrentTemperature;
             this.TargetTemperature = thermostatTargetTemperature;
 
+        }
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("this is a smart thermostat");
+            Console.WriteLine($"CurrentTemperature: {CurrentTemperature},"+ $"TargetTemperature: {TargetTemperature}");
         }
     }
 }
